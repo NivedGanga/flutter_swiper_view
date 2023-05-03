@@ -63,7 +63,7 @@ void main() {
         return const Text("0");
       },
       itemCount: 10,
-      pagination: const SwiperPagination(),
+      pagination:  SwiperPagination(),
       control: const SwiperControl(),
     )));
 
@@ -137,7 +137,7 @@ void main() {
         return const Text("0");
       },
       itemCount: 10,
-      pagination: const SwiperPagination(builder: SwiperPagination.fraction),
+      pagination:  SwiperPagination(builder: SwiperPagination.fraction),
       control: const SwiperControl(),
     )));
 
@@ -154,7 +154,7 @@ void main() {
         return const Text("0");
       },
       itemCount: 0,
-      pagination: const SwiperPagination(builder: SwiperPagination.fraction),
+      pagination:  SwiperPagination(builder: SwiperPagination.fraction),
       control: const SwiperControl(),
     )));
 

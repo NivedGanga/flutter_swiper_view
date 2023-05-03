@@ -45,7 +45,7 @@ class _InnerSwiperState extends State<InnerSwiper> {
         loop: false,
         itemCount: 10,
         controller: controller,
-        pagination: const SwiperPagination(),
+        pagination:  SwiperPagination(),
         itemBuilder: (context, index) {
           return Column(
             children: <Widget>[
@@ -53,7 +53,7 @@ class _InnerSwiperState extends State<InnerSwiper> {
                 height: 300.0,
                 child: Swiper(
                   controller: controllers[index],
-                  pagination: const SwiperPagination(),
+                  pagination:  SwiperPagination(),
                   itemCount: 4,
                   itemBuilder: (context, index) {
                     return Container(

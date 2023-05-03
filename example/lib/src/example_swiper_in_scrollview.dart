@@ -137,7 +137,7 @@ class _ExampleState extends State<ExampleSwiperInScrollView>
                       );
                     },
                     itemCount: 10,
-                    pagination: const SwiperPagination(),
+                    pagination: SwiperPagination(),
                   ),
                 ),
                 SizedBox(
@@ -151,8 +151,8 @@ class _ExampleState extends State<ExampleSwiperInScrollView>
                           child: Text("$i"),
                         );
                       },
-                      pagination: const SwiperPagination(
-                          builder: SwiperPagination.fraction),
+                      pagination:
+                          SwiperPagination(builder: SwiperPagination.fraction),
                       itemCount: 0),
                 ),
                 SizedBox(
@@ -166,8 +166,8 @@ class _ExampleState extends State<ExampleSwiperInScrollView>
                           child: Text("$i"),
                         );
                       },
-                      pagination: const SwiperPagination(
-                          builder: SwiperPagination.fraction),
+                      pagination:
+                          SwiperPagination(builder: SwiperPagination.fraction),
                       itemCount: 10000),
                 ),
                 SizedBox(
@@ -182,7 +182,7 @@ class _ExampleState extends State<ExampleSwiperInScrollView>
                           child: Text("$i"),
                         );
                       },
-                      pagination: const SwiperPagination(),
+                      pagination: SwiperPagination(),
                       itemCount: 10),
                 ),
                 const Text("Image from network"),
@@ -234,8 +234,8 @@ class _ExampleState extends State<ExampleSwiperInScrollView>
                           ),
                         );
                       },
-                      pagination: const SwiperPagination(
-                          alignment: Alignment.topCenter),
+                      pagination:
+                          SwiperPagination(alignment: Alignment.topCenter),
                       itemCount: 10),
                 ),
                 SizedBox(
@@ -245,8 +245,8 @@ class _ExampleState extends State<ExampleSwiperInScrollView>
                       itemBuilder: (c, i) {
                         return _buildDynamicCard();
                       },
-                      pagination: const SwiperPagination(
-                          alignment: Alignment.topCenter),
+                      pagination:
+                          SwiperPagination(alignment: Alignment.topCenter),
                       itemCount: 10),
                 ),
                 SizedBox(
@@ -262,8 +262,8 @@ class _ExampleState extends State<ExampleSwiperInScrollView>
                           child: Text("$i"),
                         );
                       },
-                      pagination: const SwiperPagination(
-                          alignment: Alignment.topCenter),
+                      pagination:
+                          SwiperPagination(alignment: Alignment.topCenter),
                       itemCount: 10),
                 ),
               ],

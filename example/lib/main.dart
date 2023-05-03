@@ -132,7 +132,7 @@ class ExampleHorizontal extends StatelessWidget {
           indicatorLayout: PageIndicatorLayout.COLOR,
           autoplay: true,
           itemCount: images.length,
-          pagination: const SwiperPagination(),
+          pagination: SwiperPagination(),
           control: const SwiperControl(),
         ));
   }
@@ -157,7 +157,7 @@ class ExampleVertical extends StatelessWidget {
           autoplay: true,
           itemCount: images.length,
           scrollDirection: Axis.vertical,
-          pagination: const SwiperPagination(alignment: Alignment.centerRight),
+          pagination: SwiperPagination(alignment: Alignment.centerRight),
           control: const SwiperControl(),
         ));
   }
@@ -184,8 +184,7 @@ class ExampleFraction extends StatelessWidget {
               },
               autoplay: true,
               itemCount: images.length,
-              pagination:
-                  const SwiperPagination(builder: SwiperPagination.fraction),
+              pagination: SwiperPagination(builder: SwiperPagination.fraction),
               control: const SwiperControl(),
             )),
             Expanded(
@@ -199,7 +198,7 @@ class ExampleFraction extends StatelessWidget {
               autoplay: true,
               itemCount: images.length,
               scrollDirection: Axis.vertical,
-              pagination: const SwiperPagination(
+              pagination: SwiperPagination(
                   alignment: Alignment.centerRight,
                   builder: SwiperPagination.fraction),
             ))
@@ -229,8 +228,11 @@ class ExampleRect extends StatelessWidget {
                 },
                 autoplay: true,
                 itemCount: images.length,
-                pagination:
-                    const SwiperPagination(builder: SwiperPagination.rect),
+                pagination: SwiperPagination(
+                    builder: SwiperPagination(
+                            size: const Size(10, 4),
+                            activeSize: const Size(20, 5))
+                        .rect),
                 control: const SwiperControl(),
               ),
             ),
@@ -245,9 +247,9 @@ class ExampleRect extends StatelessWidget {
                 autoplay: true,
                 itemCount: images.length,
                 scrollDirection: Axis.vertical,
-                pagination: const SwiperPagination(
+                pagination: SwiperPagination(
                   alignment: Alignment.centerRight,
-                  builder: SwiperPagination.rect,
+                  builder: SwiperPagination().rect,
                 ),
               ),
             )
@@ -359,7 +361,7 @@ class ExamplePhone extends StatelessWidget {
           ),
           Swiper.children(
             autoplay: false,
-            pagination: const SwiperPagination(
+            pagination: SwiperPagination(
                 margin: EdgeInsets.fromLTRB(0.0, 0.0, 0.0, 30.0),
                 builder: DotSwiperPaginationBuilder(
                     color: Colors.white30,

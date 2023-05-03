@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_swiper_view/flutter_swiper_view.dart';
 
@@ -179,7 +181,6 @@ class DotSwiperPaginationBuilder extends SwiperPlugin {
 
   @override
   Widget build(BuildContext context, SwiperPluginConfig config) {
-
     int itemCount = config.itemCount;
     if (itemCount <= 1) {
       return Container();
@@ -268,7 +269,6 @@ class SwiperPagination extends SwiperPlugin {
   static const SwiperPlugin fraction = FractionPaginationBuilder();
 
   /// round rect style pagination
-  static const SwiperPlugin rect = RectSwiperPaginationBuilder();
 
   /// Alignment.bottomCenter by default when scrollDirection== Axis.horizontal
   /// Alignment.centerRight by default when scrollDirection== Axis.vertical
@@ -276,18 +276,31 @@ class SwiperPagination extends SwiperPlugin {
 
   /// Distance between pagination and the container
   final EdgeInsetsGeometry margin;
+  late SwiperPlugin rect;
 
   /// Build the widget
   final SwiperPlugin builder;
-
+  final Color? color;
   final Key? key;
-
-  const SwiperPagination({
+  final Size size;
+  final Color? activeColor;
+  final Size activeSize;
+  SwiperPagination({
+    this.activeSize = const Size(10.0, 2.0),
+    this.activeColor,
+    this.size = const Size(10.0, 2.0),
+    this.color,
     this.alignment,
     this.key,
     this.margin = const EdgeInsets.all(10.0),
     this.builder = SwiperPagination.dots,
-  });
+  }) {
+    rect = RectSwiperPaginationBuilder(
+        color: color,
+        size: size,
+        activeColor: activeColor,
+        activeSize: activeSize);
+  }
 
   @override
   Widget build(BuildContext context, SwiperPluginConfig config) {

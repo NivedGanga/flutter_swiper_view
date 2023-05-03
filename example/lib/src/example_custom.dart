@@ -145,7 +145,7 @@ class _ExampleCustomState extends State<ExampleCustom> {
       axisDirection: _axisDirection,
       indicatorLayout: PageIndicatorLayout.COLOR,
       autoplayDisableOnInteraction: _autoplayDisableOnInteraction,
-      pagination: const SwiperPagination(
+      pagination:  SwiperPagination(
           builder: DotSwiperPaginationBuilder(
               size: 20.0, activeSize: 20.0, space: 10.0)),
     );
